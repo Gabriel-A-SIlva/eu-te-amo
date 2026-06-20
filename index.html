@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Minha Namorada ❤️</title>
+
+    <!-- Importando fontes elegantes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* Fundo gradiente animado e elegante */
+        background: linear-gradient(-45deg, #1a0008, #3d001a, #0a0005, #2b0015);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* --- CARTÃO CENTRAL (GLASSMORPHISM) --- */
+      .glass-card {
+        display: flex;
+        flex-direction: row; /* Lado a lado no PC */
+        align-items: center;
+        gap: 2.5rem;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 2.5rem;
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        max-width: 1000px;
+        width: 95%;
+        z-index: 10;
+      }
+
+      /* --- CARROSSEL DE IMAGENS --- */
+      .carousel-container {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        background-color: #000; /* Fundo escuro enquanto carrega */
+      }
+
+      .carousel-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.1); /* Efeito de zoom inicial */
+        transition:
+          opacity 1.5s ease-in-out,
+          transform 3s ease-out;
+      }
+
+      .carousel-img.active {
+        opacity: 1;
+        transform: scale(1); /* Volta ao tamanho normal suavemente */
+      }
+
+      /* --- TEXTO DA DECLARAÇÃO --- */
+      .text-container {
+        text-align: left;
+      }
+
+      .text-container h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+        color: #ffb3c6; /* Rosa suave e elegante */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .text-container p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #ececec;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+      }
+
+      /* --- RESPONSIVIDADE (CELULAR) --- */
+      @media (max-width: 850px) {
+        .glass-card {
+          flex-direction: column; /* Imagem em cima, texto embaixo */
+          padding: 1.5rem;
+          max-height: 95vh;
+          overflow-y: auto;
+          gap: 1.5rem;
+          border-radius: 20px;
+        }
+
+        .carousel-container {
+          width: 100%;
+          height: 350px;
+        }
+
+        .text-container {
+          text-align: center;
+        }
+
+        .text-container h1 {
+          font-size: 2.2rem;
+        }
+
+        .text-container p {
+          font-size: 1.05rem;
+        }
+      }
+
+      /* --- CHUVA DE CORAÇÕES --- */
+      .heart {
+        position: absolute;
+        color: #ff4d6d;
+        font-size: 20px;
+        pointer-events: none;
+        z-index: 2;
+        animation: fall linear forwards;
+        filter: drop-shadow(0 0 5px rgba(255, 77, 109, 0.5));
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-20px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(105vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cartão Central -->
+    <div class="glass-card">
+      <!-- Oito Imagens no Centro -->
+      <div class="carousel-container">
+        <!-- Coloquei a extensão .jpg, mas se suas fotos forem .png, basta alterar -->
+        <img class="carousel-img active" src="./img1.jpeg" alt="Nossa Foto 1" />
+        <img class="carousel-img" src="./img2.jpeg" alt="Nossa Foto 2" />
+        <img class="carousel-img" src="./img3.jpeg" alt="Nossa Foto 3" />
+        <img class="carousel-img" src="./img4.jpeg" alt="Nossa Foto 4" />
+        <img class="carousel-img" src="./img5.jpeg" alt="Nossa Foto 5" />
+        <img class="carousel-img" src="./img6.jpeg" alt="Nossa Foto 6" />
+        <img class="carousel-img" src="./img7.jpeg" alt="Nossa Foto 7" />
+        <img class="carousel-img" src="./img8.jpeg" alt="Nossa Foto 8" />
+      </div>
+
+      <!-- Declaração -->
+      <div class="text-container">
+        <h1>Para o Meu Amor ❤️</h1>
+        <p>
+          Você possui uma beleza rara que transcende o olhar, uma luz própria
+          que ilumina os meus dias mais cinzentos e transforma qualquer instante
+          simples em poesia. Cada traço do seu rosto parece ter sido desenhado
+          para prender minha admiração, mas é o brilho do seu sorriso que
+          realmente desarma o meu mundo e redefine o que considero perfeito.
+          Amar você é um privilégio que preenche minha alma, um sentimento
+          profundo, seguro e totalmente inevitável. Sou completamente fascinado
+          pela mulher extraordinária que você é, por dentro e por fora, hoje e
+          em cada segundo do nosso futuro.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // --- LÓGICA DO CARROSSEL AUTOMÁTICO ---
+      const images = document.querySelectorAll(".carousel-img");
+      let currentImageIndex = 0;
+      const imageInterval = 4000; // Troca de foto a cada 4 segundos
+
+      function nextImage() {
+        // Remove a classe active da imagem atual
+        images[currentImageIndex].classList.remove("active");
+
+        // Calcula o índice da próxima imagem (volta para 0 quando chega no fim)
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+
+        // Adiciona a classe active na nova imagem
+        images[currentImageIndex].classList.add("active");
+      }
+
+      setInterval(nextImage, imageInterval);
+
+      // --- LÓGICA DA ANIMAÇÃO DE CORAÇÕES ---
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+
+        // Ícone de coração aleatório
+        const heartTypes = ["❤️", "💖", "💘", "💕", "✨"];
+        heart.innerText =
+          heartTypes[Math.floor(Math.random() * heartTypes.length)];
+
+        // Posição horizontal aleatória
+        heart.style.left = Math.random() * 100 + "vw";
+
+        // Tamanho aleatório
+        heart.style.fontSize = Math.random() * 15 + 15 + "px";
+
+        // Velocidade da queda aleatória (entre 4s e 7s para ficar mais suave)
+        const duration = Math.random() * 3 + 4;
+        heart.style.animationDuration = duration + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }
+
+      // Cria corações continuamente
+      setInterval(createHeart, 400);
+    </script>
+  </body>
+</html>
